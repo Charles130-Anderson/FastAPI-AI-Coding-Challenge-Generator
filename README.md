@@ -1,2 +1,2 @@
-# Fast-API-AI-Coding-Challenge-Gen
+# FastAPI-AI-Coding-Challenge-Generator
 This is a Software for generating coding challenges using AI 
