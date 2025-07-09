@@ -1,23 +1,38 @@
 version: "3.8"
+
 services:
   backend:
-    build: ./backend
+    build:
+      context: ./backend
     env_file: ./backend/.env
     ports:
       - "8000:8000"
     depends_on:
       - postgres
+    environment:
+      DATABASE_URL: postgresql+psycopg2://postgres:example@postgres:5432/appdb
+    restart: always
 
   frontend:
-    build: ./frontend
+    build:
+      context: ./frontend
     ports:
       - "5173:80"
+    restart: always
+    depends_on:
+      - backend
 
   postgres:
     image: postgres:15-alpine
+    restart: always
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: example
       POSTGRES_DB: appdb
     ports:
       - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
