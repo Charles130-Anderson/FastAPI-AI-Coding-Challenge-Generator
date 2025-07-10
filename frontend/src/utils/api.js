@@ -1,7 +1,11 @@
 import { useAuth } from "@clerk/clerk-react";
 
-const API_BASE_URL =
-  import.meta.env.VITE_BACKEND_URL || "http://localhost:8000";
+// Ensure the backend URL is explicitly set via environment variable
+const API_BASE_URL = import.meta.env.VITE_BACKEND_URL;
+
+if (!API_BASE_URL) {
+  throw new Error("VITE_BACKEND_URL is not defined in your environment.");
+}
 
 export const useApi = () => {
   const { getToken } = useAuth();
