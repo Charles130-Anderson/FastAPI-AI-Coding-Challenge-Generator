@@ -1,5 +1,7 @@
 import { useAuth } from "@clerk/clerk-react";
 
+console.log("API_BASE_URL is:", import.meta.env.VITE_BACKEND_URL);
+
 // Ensure the backend URL is explicitly set via environment variable
 const API_BASE_URL = import.meta.env.VITE_BACKEND_URL;
 
