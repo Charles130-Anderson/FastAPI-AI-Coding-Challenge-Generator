@@ -12,9 +12,12 @@ export const useApi = () => {
             }
         }
 
-        const response = await fetch(`http://localhost:8000/api/${endpoint}`, {
-            ...defaultOptions,
-            ...options,
+    const API_BASE_URL =
+      import.meta.env.VITE_BACKEND_URL || "http://localhost:8000";
+
+    const response = await fetch(`${API_BASE_URL}/api/${endpoint}`, {
+      ...defaultOptions,
+      ...options,
         })
 
         if (!response.ok) {
