@@ -8,7 +8,7 @@ A **full-stack AI-powered coding challenge generator** built using **FastAPI** f
 
 ## 🌐 Live Demo
 
-* 🔗 Frontend: [fastapi-ai-coding-challenge-generator-production-ffe3.up.railway.app](https://fastapi-ai-coding-challenge-generator-production-ffe3.up.railway.app)
+* 🔗 Frontend: [fastapi ai coding challenge generator](https://fastapi-ai-coding-challenge-generator-production-ffe3.up.railway.app)
 * 📘 Docs: [Backend OpenAPI](https://fastapi-ai-coding-challenge-generator-production.up.railway.app/docs)
 
 ---
